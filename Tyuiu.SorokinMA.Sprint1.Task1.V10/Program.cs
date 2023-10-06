@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.SorokinMA.Sprint1.Task0.V7.Lib;
+using Tyuiu.SorokinMA.Sprint1.Task1.V10.Lib;
 
-namespace Tyuiu.SorokinMA.Sprint1.Task0.V7
+namespace Tyuiu.SorokinMA.Sprint1.Task1.V10
 {
     class Program
     {
@@ -15,25 +15,33 @@ namespace Tyuiu.SorokinMA.Sprint1.Task0.V7
             Console.Title = "Спринт #1 | Выполнил: Сорокин М. А. | ПКТб-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #1                                                               *");
-            Console.WriteLine("* Тема: Базовые навыки работы в C#                                        *");
-            Console.WriteLine("* Задание #0                                                              *");
-            Console.WriteLine("* Вариант #7                                                              *");
+            Console.WriteLine("* Тема: Организация ввода\\вывода в консольных приложениях                 *");
+            Console.WriteLine("* Задание #1                                                              *");
+            Console.WriteLine("* Вариант #10                                                             *");
             Console.WriteLine("* Выполнил: Сорокин Михаил Анатольевич | ПКТб-23-1                        *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу, которая вычисляет выражение 18 / 6 * 2 - (4 - 3)    *");
-            Console.WriteLine("* и печатает результат на экране                                          *");
-            Console.WriteLine("*                                                                         *");
+            Console.WriteLine("* Написать программу, которая запрашивает у пользователя исходные данные, *");
+            Console.WriteLine("* вычисляет результат по формуле (x + y) / (1 + x) и печатает  его на     *");
+            Console.WriteLine("* экране.                                                                 *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* 18 / 6 * 2 - (4 - 3)                                                    *");
+
+            double x, y;
+
+            Console.WriteLine("Введите значение X: ");
+            x = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Введите значение Y: ");
+            y = Convert.ToDouble(Console.ReadLine());
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine(ds.Calculate());
-            Console.ReadKey();
 
+            Console.WriteLine(ds.Calculate(x, y));
+            Console.ReadKey();
         }
     }
 }
